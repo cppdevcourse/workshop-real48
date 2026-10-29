@@ -50,14 +50,12 @@ Real48(const double number);
    $$F = \left(-1\right)^s \cdot 2^{e - 129} \cdot \left(1 + \frac{f}{2^{39}}\right)$$
 
    Можно считать, что `float` и `double`
-   закодированы стандартом IEEE~754 в little-endian архитектуре.
+   закодированы стандартом IEEE 754 в little-endian архитектуре.
    Например, для перевода из `double` можно составить
    следующее равенство:
 
-   $$\begin{split}
-     F = \left(-1\right)^{s_{48}} \cdot 2^{e_{48} - 129} \cdot \left(1 + \frac{f_{48}}{2^{39}}\right) = \\
-       \left(-1\right)^{s_{64}} \cdot 2^{e_{64} - 1023} \cdot \left(1 + \frac{f_{64}}{2^{52}}\right)
-   \end{split}$$
+   $$F = \left(-1\right)^{s_{48}} \cdot 2^{e_{48} - 129} \cdot \left(1 + \frac{f_{48}}{2^{39}}\right) = \\
+       \left(-1\right)^{s_{64}} \cdot 2^{e_{64} - 1023} \cdot \left(1 + \frac{f_{64}}{2^{52}}\right)$$
 
    где $s_{48}$, $e_{48}$ и $f_{48}$ — искомые параметры
    `Real48`, а $s_{64}$, $e_{64}$ и $f_{64}$ — известные параметры
