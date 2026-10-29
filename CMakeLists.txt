@@ -9,7 +9,7 @@ if (CMAKE_EXPORT_COMPILE_COMMANDS)
       ${CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES})
 endif ()
 
-add_compile_options(-Wall -Wextra -Wpedantic)
+add_compile_options(-Wall -Wextra -Wpedantic -Wno-unused-command-line-argument)
 
 add_library(real48 real48.cpp)
 target_compile_options(real48 PRIVATE -Werror)
