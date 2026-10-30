@@ -17,3 +17,4 @@ CC=clang
 
 [conf]
 &:tools.cmake.cmaketoolchain:extra_variables *= {"WITH_TESTS": "ON"}
+tools.build:cxxflags += -Wno-unused-command-line-argument
